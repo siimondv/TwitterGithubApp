@@ -6,30 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A642D4EA2D25BA8600AAABD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4E42D25BA8600AAABD6 /* AppDelegate.swift */; };
+		A642D4EB2D25BA8600AAABD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4E82D25BA8600AAABD6 /* SceneDelegate.swift */; };
+		A642D4EC2D25BA8600AAABD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A642D4E52D25BA8600AAABD6 /* Assets.xcassets */; };
+		A642D4ED2D25BA8600AAABD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A642D4E72D25BA8600AAABD6 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		A642D4CC2D25BA4100AAABD6 /* TwitterGithubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterGithubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A642D4E42D25BA8600AAABD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A642D4E52D25BA8600AAABD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A642D4E62D25BA8600AAABD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A642D4E82D25BA8600AAABD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A642D4DE2D25BA4300AAABD6 /* Exceptions for "TwitterGithubApp" folder in "TwitterGithubApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = A642D4CB2D25BA4100AAABD6 /* TwitterGithubApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		A642D4CE2D25BA4100AAABD6 /* TwitterGithubApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				A642D4DE2D25BA4300AAABD6 /* Exceptions for "TwitterGithubApp" folder in "TwitterGithubApp" target */,
-			);
-			path = TwitterGithubApp;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A642D4C92D25BA4100AAABD6 /* Frameworks */ = {
@@ -45,7 +35,7 @@
 		A642D4C32D25BA4100AAABD6 = {
 			isa = PBXGroup;
 			children = (
-				A642D4CE2D25BA4100AAABD6 /* TwitterGithubApp */,
+				A642D4E92D25BA8600AAABD6 /* TwitterGithubApp */,
 				A642D4CD2D25BA4100AAABD6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +46,25 @@
 				A642D4CC2D25BA4100AAABD6 /* TwitterGithubApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A642D4E92D25BA8600AAABD6 /* TwitterGithubApp */ = {
+			isa = PBXGroup;
+			children = (
+				A642D4EE2D25BA8800AAABD6 /* Resources */,
+			);
+			path = TwitterGithubApp;
+			sourceTree = "<group>";
+		};
+		A642D4EE2D25BA8800AAABD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A642D4E42D25BA8600AAABD6 /* AppDelegate.swift */,
+				A642D4E52D25BA8600AAABD6 /* Assets.xcassets */,
+				A642D4E72D25BA8600AAABD6 /* LaunchScreen.storyboard */,
+				A642D4E82D25BA8600AAABD6 /* SceneDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +81,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				A642D4CE2D25BA4100AAABD6 /* TwitterGithubApp */,
 			);
 			name = TwitterGithubApp;
 			packageProductDependencies = (
@@ -122,6 +128,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A642D4EC2D25BA8600AAABD6 /* Assets.xcassets in Resources */,
+				A642D4ED2D25BA8600AAABD6 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +140,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A642D4EA2D25BA8600AAABD6 /* AppDelegate.swift in Sources */,
+				A642D4EB2D25BA8600AAABD6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A642D4E72D25BA8600AAABD6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A642D4E62D25BA8600AAABD6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A642D4E02D25BA4300AAABD6 /* Debug */ = {
@@ -149,7 +170,6 @@
 				INFOPLIST_FILE = TwitterGithubApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -176,7 +196,6 @@
 				INFOPLIST_FILE = TwitterGithubApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
