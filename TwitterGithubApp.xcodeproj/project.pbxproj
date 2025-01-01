@@ -14,6 +14,10 @@
 		A642D4F32D25BF4100AAABD6 /* RMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4EF2D25BF4100AAABD6 /* RMService.swift */; };
 		A642D4F42D25BF4100AAABD6 /* RMEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F12D25BF4100AAABD6 /* RMEndpoint.swift */; };
 		A642D4F52D25BF4100AAABD6 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F02D25BF4100AAABD6 /* RMRequest.swift */; };
+		A642D4FE2D25BF6A00AAABD6 /* RMTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F92D25BF6A00AAABD6 /* RMTabViewController.swift */; };
+		A642D4FF2D25BF6A00AAABD6 /* RMOrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4FA2D25BF6A00AAABD6 /* RMOrganizationViewController.swift */; };
+		A642D5002D25BF6A00AAABD6 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F62D25BF6A00AAABD6 /* Organization.swift */; };
+		A642D5012D25BF6A00AAABD6 /* RMContributorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4FB2D25BF6A00AAABD6 /* RMContributorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		A642D4EF2D25BF4100AAABD6 /* RMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMService.swift; sourceTree = "<group>"; };
 		A642D4F02D25BF4100AAABD6 /* RMRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRequest.swift; sourceTree = "<group>"; };
 		A642D4F12D25BF4100AAABD6 /* RMEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEndpoint.swift; sourceTree = "<group>"; };
+		A642D4F62D25BF6A00AAABD6 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		A642D4F92D25BF6A00AAABD6 /* RMTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMTabViewController.swift; sourceTree = "<group>"; };
+		A642D4FA2D25BF6A00AAABD6 /* RMOrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMOrganizationViewController.swift; sourceTree = "<group>"; };
+		A642D4FB2D25BF6A00AAABD6 /* RMContributorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMContributorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,8 @@
 		A642D4E92D25BA8600AAABD6 /* TwitterGithubApp */ = {
 			isa = PBXGroup;
 			children = (
+				A642D4F72D25BF6A00AAABD6 /* Models */,
+				A642D4FD2D25BF6A00AAABD6 /* Controllers */,
 				A642D4F22D25BF4100AAABD6 /* APIClient */,
 				A642D4EE2D25BA8800AAABD6 /* Resources */,
 			);
@@ -82,6 +92,40 @@
 				A642D4F12D25BF4100AAABD6 /* RMEndpoint.swift */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		A642D4F72D25BF6A00AAABD6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A642D4F62D25BF6A00AAABD6 /* Organization.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A642D4F82D25BF6A00AAABD6 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		A642D4FC2D25BF6A00AAABD6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A642D4F92D25BF6A00AAABD6 /* RMTabViewController.swift */,
+				A642D4FA2D25BF6A00AAABD6 /* RMOrganizationViewController.swift */,
+				A642D4FB2D25BF6A00AAABD6 /* RMContributorViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A642D4FD2D25BF6A00AAABD6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A642D4F82D25BF6A00AAABD6 /* Others */,
+				A642D4FC2D25BF6A00AAABD6 /* Core */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +205,10 @@
 				A642D4F42D25BF4100AAABD6 /* RMEndpoint.swift in Sources */,
 				A642D4F52D25BF4100AAABD6 /* RMRequest.swift in Sources */,
 				A642D4EA2D25BA8600AAABD6 /* AppDelegate.swift in Sources */,
+				A642D4FE2D25BF6A00AAABD6 /* RMTabViewController.swift in Sources */,
+				A642D4FF2D25BF6A00AAABD6 /* RMOrganizationViewController.swift in Sources */,
+				A642D5002D25BF6A00AAABD6 /* Organization.swift in Sources */,
+				A642D5012D25BF6A00AAABD6 /* RMContributorViewController.swift in Sources */,
 				A642D4EB2D25BA8600AAABD6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
