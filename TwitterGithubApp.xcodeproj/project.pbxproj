@@ -11,6 +11,9 @@
 		A642D4EB2D25BA8600AAABD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4E82D25BA8600AAABD6 /* SceneDelegate.swift */; };
 		A642D4EC2D25BA8600AAABD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A642D4E52D25BA8600AAABD6 /* Assets.xcassets */; };
 		A642D4ED2D25BA8600AAABD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A642D4E72D25BA8600AAABD6 /* LaunchScreen.storyboard */; };
+		A642D4F32D25BF4100AAABD6 /* RMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4EF2D25BF4100AAABD6 /* RMService.swift */; };
+		A642D4F42D25BF4100AAABD6 /* RMEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F12D25BF4100AAABD6 /* RMEndpoint.swift */; };
+		A642D4F52D25BF4100AAABD6 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F02D25BF4100AAABD6 /* RMRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		A642D4E52D25BA8600AAABD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A642D4E62D25BA8600AAABD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A642D4E82D25BA8600AAABD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A642D4EF2D25BF4100AAABD6 /* RMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMService.swift; sourceTree = "<group>"; };
+		A642D4F02D25BF4100AAABD6 /* RMRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRequest.swift; sourceTree = "<group>"; };
+		A642D4F12D25BF4100AAABD6 /* RMEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		A642D4E92D25BA8600AAABD6 /* TwitterGithubApp */ = {
 			isa = PBXGroup;
 			children = (
+				A642D4F22D25BF4100AAABD6 /* APIClient */,
 				A642D4EE2D25BA8800AAABD6 /* Resources */,
 			);
 			path = TwitterGithubApp;
@@ -65,6 +72,16 @@
 				A642D4E82D25BA8600AAABD6 /* SceneDelegate.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A642D4F22D25BF4100AAABD6 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				A642D4EF2D25BF4100AAABD6 /* RMService.swift */,
+				A642D4F02D25BF4100AAABD6 /* RMRequest.swift */,
+				A642D4F12D25BF4100AAABD6 /* RMEndpoint.swift */,
+			);
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A642D4F32D25BF4100AAABD6 /* RMService.swift in Sources */,
+				A642D4F42D25BF4100AAABD6 /* RMEndpoint.swift in Sources */,
+				A642D4F52D25BF4100AAABD6 /* RMRequest.swift in Sources */,
 				A642D4EA2D25BA8600AAABD6 /* AppDelegate.swift in Sources */,
 				A642D4EB2D25BA8600AAABD6 /* SceneDelegate.swift in Sources */,
 			);
