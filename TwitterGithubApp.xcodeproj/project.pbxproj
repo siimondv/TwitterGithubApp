@@ -7,32 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A63BEB6A2D26B79F00B424DC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63BEB692D26B79C00B424DC /* Extensions.swift */; };
 		A642D4EA2D25BA8600AAABD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4E42D25BA8600AAABD6 /* AppDelegate.swift */; };
 		A642D4EB2D25BA8600AAABD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4E82D25BA8600AAABD6 /* SceneDelegate.swift */; };
 		A642D4EC2D25BA8600AAABD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A642D4E52D25BA8600AAABD6 /* Assets.xcassets */; };
 		A642D4ED2D25BA8600AAABD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A642D4E72D25BA8600AAABD6 /* LaunchScreen.storyboard */; };
-		A642D4F32D25BF4100AAABD6 /* RMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4EF2D25BF4100AAABD6 /* RMService.swift */; };
-		A642D4F42D25BF4100AAABD6 /* RMEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F12D25BF4100AAABD6 /* RMEndpoint.swift */; };
-		A642D4F52D25BF4100AAABD6 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F02D25BF4100AAABD6 /* RMRequest.swift */; };
-		A642D4FE2D25BF6A00AAABD6 /* RMTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F92D25BF6A00AAABD6 /* RMTabViewController.swift */; };
-		A642D4FF2D25BF6A00AAABD6 /* RMOrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4FA2D25BF6A00AAABD6 /* RMOrganizationViewController.swift */; };
+		A642D4F32D25BF4100AAABD6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4EF2D25BF4100AAABD6 /* Service.swift */; };
+		A642D4F42D25BF4100AAABD6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F12D25BF4100AAABD6 /* Endpoint.swift */; };
+		A642D4F52D25BF4100AAABD6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F02D25BF4100AAABD6 /* Request.swift */; };
+		A642D4FE2D25BF6A00AAABD6 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F92D25BF6A00AAABD6 /* TabViewController.swift */; };
+		A642D4FF2D25BF6A00AAABD6 /* OrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4FA2D25BF6A00AAABD6 /* OrganizationViewController.swift */; };
 		A642D5002D25BF6A00AAABD6 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4F62D25BF6A00AAABD6 /* Organization.swift */; };
-		A642D5012D25BF6A00AAABD6 /* RMContributorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4FB2D25BF6A00AAABD6 /* RMContributorViewController.swift */; };
+		A642D5012D25BF6A00AAABD6 /* ContributorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D4FB2D25BF6A00AAABD6 /* ContributorViewController.swift */; };
+		A642D5042D25C08B00AAABD6 /* OrganizationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D5032D25C08100AAABD6 /* OrganizationViewViewModel.swift */; };
+		A642D5072D25C10D00AAABD6 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642D5062D25C10D00AAABD6 /* OrganizationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A63BEB692D26B79C00B424DC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A642D4CC2D25BA4100AAABD6 /* TwitterGithubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterGithubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A642D4E42D25BA8600AAABD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A642D4E52D25BA8600AAABD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A642D4E62D25BA8600AAABD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A642D4E82D25BA8600AAABD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A642D4EF2D25BF4100AAABD6 /* RMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMService.swift; sourceTree = "<group>"; };
-		A642D4F02D25BF4100AAABD6 /* RMRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRequest.swift; sourceTree = "<group>"; };
-		A642D4F12D25BF4100AAABD6 /* RMEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEndpoint.swift; sourceTree = "<group>"; };
+		A642D4EF2D25BF4100AAABD6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A642D4F02D25BF4100AAABD6 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		A642D4F12D25BF4100AAABD6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A642D4F62D25BF6A00AAABD6 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
-		A642D4F92D25BF6A00AAABD6 /* RMTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMTabViewController.swift; sourceTree = "<group>"; };
-		A642D4FA2D25BF6A00AAABD6 /* RMOrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMOrganizationViewController.swift; sourceTree = "<group>"; };
-		A642D4FB2D25BF6A00AAABD6 /* RMContributorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMContributorViewController.swift; sourceTree = "<group>"; };
+		A642D4F92D25BF6A00AAABD6 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		A642D4FA2D25BF6A00AAABD6 /* OrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewController.swift; sourceTree = "<group>"; };
+		A642D4FB2D25BF6A00AAABD6 /* ContributorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorViewController.swift; sourceTree = "<group>"; };
+		A642D5032D25C08100AAABD6 /* OrganizationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewViewModel.swift; sourceTree = "<group>"; };
+		A642D5062D25C10D00AAABD6 /* OrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,8 @@
 		A642D4E92D25BA8600AAABD6 /* TwitterGithubApp */ = {
 			isa = PBXGroup;
 			children = (
+				A642D5052D25C0F500AAABD6 /* Views */,
+				A642D5022D25C04100AAABD6 /* ViewModels */,
 				A642D4F72D25BF6A00AAABD6 /* Models */,
 				A642D4FD2D25BF6A00AAABD6 /* Controllers */,
 				A642D4F22D25BF4100AAABD6 /* APIClient */,
@@ -76,6 +84,7 @@
 		A642D4EE2D25BA8800AAABD6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A63BEB692D26B79C00B424DC /* Extensions.swift */,
 				A642D4E42D25BA8600AAABD6 /* AppDelegate.swift */,
 				A642D4E52D25BA8600AAABD6 /* Assets.xcassets */,
 				A642D4E72D25BA8600AAABD6 /* LaunchScreen.storyboard */,
@@ -87,9 +96,9 @@
 		A642D4F22D25BF4100AAABD6 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				A642D4EF2D25BF4100AAABD6 /* RMService.swift */,
-				A642D4F02D25BF4100AAABD6 /* RMRequest.swift */,
-				A642D4F12D25BF4100AAABD6 /* RMEndpoint.swift */,
+				A642D4EF2D25BF4100AAABD6 /* Service.swift */,
+				A642D4F02D25BF4100AAABD6 /* Request.swift */,
+				A642D4F12D25BF4100AAABD6 /* Endpoint.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -112,9 +121,9 @@
 		A642D4FC2D25BF6A00AAABD6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A642D4F92D25BF6A00AAABD6 /* RMTabViewController.swift */,
-				A642D4FA2D25BF6A00AAABD6 /* RMOrganizationViewController.swift */,
-				A642D4FB2D25BF6A00AAABD6 /* RMContributorViewController.swift */,
+				A642D4F92D25BF6A00AAABD6 /* TabViewController.swift */,
+				A642D4FA2D25BF6A00AAABD6 /* OrganizationViewController.swift */,
+				A642D4FB2D25BF6A00AAABD6 /* ContributorViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -126,6 +135,22 @@
 				A642D4FC2D25BF6A00AAABD6 /* Core */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A642D5022D25C04100AAABD6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A642D5032D25C08100AAABD6 /* OrganizationViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A642D5052D25C0F500AAABD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A642D5062D25C10D00AAABD6 /* OrganizationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,14 +226,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A642D4F32D25BF4100AAABD6 /* RMService.swift in Sources */,
-				A642D4F42D25BF4100AAABD6 /* RMEndpoint.swift in Sources */,
-				A642D4F52D25BF4100AAABD6 /* RMRequest.swift in Sources */,
+				A642D4F32D25BF4100AAABD6 /* Service.swift in Sources */,
+				A642D4F42D25BF4100AAABD6 /* Endpoint.swift in Sources */,
+				A642D4F52D25BF4100AAABD6 /* Request.swift in Sources */,
 				A642D4EA2D25BA8600AAABD6 /* AppDelegate.swift in Sources */,
-				A642D4FE2D25BF6A00AAABD6 /* RMTabViewController.swift in Sources */,
-				A642D4FF2D25BF6A00AAABD6 /* RMOrganizationViewController.swift in Sources */,
+				A642D5072D25C10D00AAABD6 /* OrganizationView.swift in Sources */,
+				A642D4FE2D25BF6A00AAABD6 /* TabViewController.swift in Sources */,
+				A642D4FF2D25BF6A00AAABD6 /* OrganizationViewController.swift in Sources */,
+				A63BEB6A2D26B79F00B424DC /* Extensions.swift in Sources */,
+				A642D5042D25C08B00AAABD6 /* OrganizationViewViewModel.swift in Sources */,
 				A642D5002D25BF6A00AAABD6 /* Organization.swift in Sources */,
-				A642D5012D25BF6A00AAABD6 /* RMContributorViewController.swift in Sources */,
+				A642D5012D25BF6A00AAABD6 /* ContributorViewController.swift in Sources */,
 				A642D4EB2D25BA8600AAABD6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

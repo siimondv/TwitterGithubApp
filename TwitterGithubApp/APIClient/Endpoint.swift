@@ -8,6 +8,6 @@
 import Foundation
 
 /// Represents unique API endpoint
-@frozen enum RMEndpoint: String {
+@frozen enum Endpoint: String {
     case contributors
 }

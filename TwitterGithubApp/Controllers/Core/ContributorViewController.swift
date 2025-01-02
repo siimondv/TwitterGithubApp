@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RMContributorViewController: UIViewController {
+final class ContributorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

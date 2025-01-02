@@ -8,14 +8,14 @@
 import Foundation
 
 /// Object that represents a singlet API call
-final class RMRequest {
+final class Request {
     /// API Constants
     private struct Constants {
         static let baseUrl = "https://api.github.com/repos/twitter/opensource-website"
     }
 
     /// Desired endpoint (optional)
-    private let endpoint: RMEndpoint?
+    private let endpoint: Endpoint?
 
     /// Path components for API, if any
     private let pathComponents: [String]
@@ -65,7 +65,7 @@ final class RMRequest {
     ///   - pathComponents: Collection of Path components
     ///   - queryParameters: Collection of query parameters
     public init(
-        endpoint: RMEndpoint? = nil,
+        endpoint: Endpoint? = nil,
         pathComponents: [String] = [],
         queryParameters: [URLQueryItem] = []
     ) {
@@ -75,7 +75,7 @@ final class RMRequest {
     }
 }
 
-extension RMRequest {
-    static let organizationRequest = RMRequest()
-    static let contributorListRequest = RMRequest(endpoint: .contributors)
+extension Request {
+    static let organizationRequest = Request()
+    static let contributorListRequest = Request(endpoint: .contributors)
 }

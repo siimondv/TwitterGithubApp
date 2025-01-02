@@ -8,7 +8,7 @@
 import UIKit
 
 /// Controller to house tabs and root tab controllers
-final class RMTabViewController: UITabBarController {
+final class TabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +17,8 @@ final class RMTabViewController: UITabBarController {
 
     private func setUpTabs() {
         
-        let organizationsVC = RMOrganizationViewController()
-        let contributorsVC = RMContributorViewController()
+        let organizationsVC = OrganizationViewController()
+        let contributorsVC = ContributorViewController()
         
         organizationsVC.navigationItem.largeTitleDisplayMode = .automatic
         contributorsVC.navigationItem.largeTitleDisplayMode = .automatic
