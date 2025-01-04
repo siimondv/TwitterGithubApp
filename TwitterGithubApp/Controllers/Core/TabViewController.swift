@@ -20,8 +20,8 @@ final class TabViewController: UITabBarController {
         let organizationsVC = OrganizationViewController()
         let contributorsVC = ContributorViewController()
         
-        organizationsVC.navigationItem.largeTitleDisplayMode = .automatic
-        contributorsVC.navigationItem.largeTitleDisplayMode = .automatic
+        organizationsVC.navigationItem.largeTitleDisplayMode = .never
+        contributorsVC.navigationItem.largeTitleDisplayMode = .never
         
         
         

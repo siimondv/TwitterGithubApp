@@ -86,7 +86,7 @@ final class OrganizationView: UIView {
 
         spinner.startAnimating()
         viewModel.delegate = self
-        viewModel.getOrganization() // Fetch organization data
+        viewModel.getOrganization()
     }
 
     required init?(coder: NSCoder) {
@@ -135,7 +135,6 @@ final class OrganizationView: UIView {
     }
 
     private func configure() {
-        // Hide UI elements until data is loaded
         imageView.isHidden = true
         nameLabel.isHidden = true
         descriptionLabel.isHidden = true
@@ -144,14 +143,6 @@ final class OrganizationView: UIView {
         watchersLabel.isHidden = true
     }
 
-    private func loadImage(from url: URL) {
-        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            guard let data = data, error == nil else { return }
-            DispatchQueue.main.async {
-                self?.imageView.image = UIImage(data: data)
-            }
-        }.resume()
-    }
 }
 
 // MARK: - OrganizationViewViewModelDelegate
@@ -174,9 +165,16 @@ extension OrganizationView: OrganizationViewViewModelDelegate {
             self?.visibilityLabel.text = "Visibility: \(organization.visibility)"
             self?.watchersLabel.text = "Watchers: \(organization.watchers)"
 
-            if let url = URL(string: organization.organizationDetails.avatarURL) {
-                self?.loadImage(from: url)
-            }
+            self?.viewModel.fetchImage(from: organization.organizationDetails.avatarURL) { result in
+                            DispatchQueue.main.async {
+                                switch result {
+                                case .success(let data):
+                                    self?.imageView.image = UIImage(data: data)
+                                case .failure(let error):
+                                    print("Failed to load image: \(error)")
+                                }
+                            }
+                        }
         }
     }
 }

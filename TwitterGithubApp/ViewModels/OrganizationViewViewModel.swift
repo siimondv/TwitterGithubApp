@@ -27,4 +27,13 @@ final class OrganizationViewViewModel {
             }
         }
     }
+    
+    func fetchImage(from urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
+            guard let url = URL(string: urlString) else {
+                completion(.failure(URLError(.badURL)))
+                return
+            }
+        
+        ImageLoader.shared.downloadImage(url, completion: completion)
+        }
 }
