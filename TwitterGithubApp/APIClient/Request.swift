@@ -7,75 +7,56 @@
 
 import Foundation
 
-/// Object that represents a singlet API call
 final class Request {
-    /// API Constants
-    private struct Constants {
-        static let baseUrl = "https://api.github.com/repos/twitter/opensource-website"
-    }
+    /// Full URL for the request
+    public let url: URL
 
-    /// Desired endpoint (optional)
-    private let endpoint: Endpoint?
+    /// HTTP Method (default: GET)
+    public let httpMethod: String
 
-    /// Path components for API, if any
-    private let pathComponents: [String]
+    /// Query Parameters, if any
+    public let queryParameters: [URLQueryItem]
 
-    /// Query arguments for API, if any
-    private let queryParameters: [URLQueryItem]
+    // MARK: - Initializers
 
-    /// Constructed url for the API request in string format
-    private var urlString: String {
-        var string = Constants.baseUrl
-
-        if let endpoint = endpoint {
-            string += "/\(endpoint.rawValue)"
-        }
-
-        if !pathComponents.isEmpty {
-            pathComponents.forEach {
-                string += "/\($0)"
-            }
-        }
-
-        if !queryParameters.isEmpty {
-            string += "?"
-            let argumentString = queryParameters.compactMap {
-                guard let value = $0.value else { return nil }
-                return "\($0.name)=\(value)"
-            }.joined(separator: "&")
-            string += argumentString
-        }
-
-        return string
-    }
-
-    /// Computed & constructed API URL
-    public var url: URL? {
-        return URL(string: urlString)
-    }
-
-    /// Desired HTTP method
-    public let httpMethod = "GET"
-
-    // MARK: - Public
-
-    /// Construct request
+    /// Initialize with a full URL
     /// - Parameters:
-    ///   - endpoint: Optional target endpoint
-    ///   - pathComponents: Collection of Path components
-    ///   - queryParameters: Collection of query parameters
+    ///   - url: The full URL to initialize the request
+    ///   - httpMethod: HTTP method (default: GET)
+    public init?(url: URL, httpMethod: String = "GET") {
+        self.url = url
+        self.httpMethod = httpMethod
+
+        // Parse query parameters
+        let components = URLComponents(url: url, resolvingAgainstBaseURL: true)
+        self.queryParameters = components?.queryItems ?? []
+    }
+
+    /// Initialize with a path and query parameters
+    /// - Parameters:
+    ///   - path: The path of the URL
+    ///   - queryParameters: Query parameters to be appended
+    ///   - httpMethod: HTTP method (default: GET)
     public init(
-        endpoint: Endpoint? = nil,
-        pathComponents: [String] = [],
-        queryParameters: [URLQueryItem] = []
+        path: String,
+        queryParameters: [URLQueryItem] = [],
+        httpMethod: String = "GET"
     ) {
-        self.endpoint = endpoint
-        self.pathComponents = pathComponents
+        var components = URLComponents()
+        components.path = path
+        components.queryItems = queryParameters
+
+        guard let url = components.url else {
+            fatalError("Invalid URL components")
+        }
+
+        self.url = url
+        self.httpMethod = httpMethod
         self.queryParameters = queryParameters
     }
 }
 
 extension Request {
-    static let organizationRequest = Request()
-    static let contributorListRequest = Request(endpoint: .contributors)
+    static let organizationRequest = Request(url: URL(string: "https://api.github.com/repos/twitter/opensource-website")!)
+    static let contributorListRequest = Request(url: URL(string: "https://api.github.com/repos/twitter/opensource-website/contributors")!)
 }

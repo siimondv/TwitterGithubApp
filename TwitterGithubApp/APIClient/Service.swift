@@ -7,60 +7,47 @@
 
 import Foundation
 
-/// Primary API service object to get Rick and Morty data
 final class Service {
     /// Shared singleton instance
     static let shared = Service()
 
-    /// Privatized constructor
+    /// Private constructor to enforce singleton usage
     private init() {}
 
-    enum RMServiceError: Error {
-        case failedToCreateRequest
-        case failedToGetData
+    enum ServiceError: Error {
+        case invalidURL
+        case requestFailed
+        case decodingFailed
     }
 
-    /// Send Rick and Morty API Call
+    /// Execute an API request
     /// - Parameters:
-    ///   - request: Request instance
-    ///   - type: The type of object we expect to get back
-    ///   - completion: Callback with data or error
+    ///   - request: The `Request` instance
+    ///   - type: The expected Codable type
+    ///   - completion: Completion handler with success or failure
     public func execute<T: Codable>(
         _ request: Request,
         expecting type: T.Type,
         completion: @escaping (Result<T, Error>) -> Void
     ) {
-        guard let urlRequest = self.request(from: request) else {
-            completion(.failure(RMServiceError.failedToCreateRequest))
-            return
-        }
+        // Create URLRequest from the Request instance
+        var urlRequest = URLRequest(url: request.url)
+        urlRequest.httpMethod = request.httpMethod
 
-        let task = URLSession.shared.dataTask(with: urlRequest) { data, _, error in
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             guard let data = data, error == nil else {
-                completion(.failure(error ?? RMServiceError.failedToGetData))
+                completion(.failure(error ?? ServiceError.requestFailed))
                 return
             }
 
-            // Decode response
             do {
-                let result = try JSONDecoder().decode(type.self, from: data)
+                // Decode the data
+                let result = try JSONDecoder().decode(type, from: data)
                 completion(.success(result))
-            }
-            catch {
-                completion(.failure(error))
+            } catch {
+                completion(.failure(ServiceError.decodingFailed))
             }
         }
         task.resume()
-    }
-
-    // MARK: - Private
-
-    private func request(from rmRequest: Request) -> URLRequest? {
-        guard let url = rmRequest.url else {
-            return nil
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = rmRequest.httpMethod
-        return request
     }
 }

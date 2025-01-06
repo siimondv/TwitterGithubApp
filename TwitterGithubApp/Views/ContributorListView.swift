@@ -7,17 +7,27 @@
 
 import UIKit
 
+protocol ContributorListViewDelegate: AnyObject {
+    func contributorListView(
+        _ contributorListView: ContributorListView,
+        didSelectContributor contributor: Contributor
+    )
+    
+}
+
 final class ContributorListView: UIView {
     
+    public weak var delegate: ContributorListViewDelegate?
     
     private let viewModel = ContributorListViewViewModel()
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 10
+        layout.minimumLineSpacing = 30
         layout.minimumInteritemSpacing = 10
         layout.itemSize = CGSize(width: 100, height: 150)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(ContributorCollectionViewCell.self, forCellWithReuseIdentifier: ContributorCollectionViewCell.identifier)
@@ -58,6 +68,10 @@ final class ContributorListView: UIView {
 }
 
 extension ContributorListView: ContributorListViewViewModelDelegate {
+    func didSelectContributor(_ contributor: Contributor) {
+        delegate?.contributorListView( self, didSelectContributor: contributor)
+    }
+    
     func didLoadContributors() {
         collectionView.isHidden = false
         collectionView.reloadData()

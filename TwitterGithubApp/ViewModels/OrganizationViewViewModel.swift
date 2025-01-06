@@ -17,7 +17,9 @@ final class OrganizationViewViewModel {
     private var organization: Organization?
     
     func getOrganization() {
-        Service.shared.execute(Request.organizationRequest, expecting: Organization.self) { [weak self] result in
+        guard let request = Request.organizationRequest else { return }
+        
+        Service.shared.execute(request, expecting: Organization.self) { [weak self] result in
             switch result {
             case .success(let organization):
                 self?.organization = organization

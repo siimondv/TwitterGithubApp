@@ -9,6 +9,7 @@ import UIKit
 
 protocol ContributorListViewViewModelDelegate: AnyObject {
     func didLoadContributors()
+    func didSelectContributor(_ contributor: Contributor)
 }
 
 final class ContributorListViewViewModel : NSObject {
@@ -37,8 +38,9 @@ final class ContributorListViewViewModel : NSObject {
     }
     
     public func fetchContributions() {
+        guard let request = Request.contributorListRequest else { return }
         Service.shared.execute(
-            .contributorListRequest,
+            request,
             expecting: GetAllContributors.self
         ) { [weak self] result in
             switch result {
@@ -61,7 +63,7 @@ final class ContributorListViewViewModel : NSObject {
 
 // MARK: - CollectionView
 
-extension ContributorListViewViewModel: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension ContributorListViewViewModel: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellViewModels.count
@@ -87,6 +89,11 @@ extension ContributorListViewViewModel: UICollectionViewDataSource, UICollection
             height: width * 1.5
         )
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let contributor = contributors[indexPath.row]
+        delegate?.didSelectContributor(contributor)
+    }
 
 }

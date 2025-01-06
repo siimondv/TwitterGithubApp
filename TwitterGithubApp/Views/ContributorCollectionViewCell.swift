@@ -39,29 +39,42 @@ final class ContributorCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         contentView.addSubviews(imageView, nameLabel, contributionLabel)
         setUpConstraints()
+        setUpLayer()
     }
     
     required init?(coder: NSCoder) {
         fatalError("Unsupported")
     }
     
+
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            imageView.widthAnchor.constraint(equalToConstant: 50),
-            imageView.heightAnchor.constraint(equalToConstant: 50),
-            
-            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
-            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            
-            contributionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
-            contributionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            contributionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            contributionLabel.heightAnchor.constraint(equalToConstant: 30),
+            nameLabel.heightAnchor.constraint(equalToConstant: 30),
+
+            contributionLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 7),
+            contributionLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -7),
+            nameLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 7),
+            nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -7),
+
+            contributionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -3),
+            nameLabel.bottomAnchor.constraint(equalTo: contributionLabel.topAnchor),
+
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+            imageView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            imageView.bottomAnchor.constraint(equalTo: nameLabel.topAnchor, constant: -3),
         ])
     }
     
+    private func setUpLayer() {
+        contentView.layer.borderWidth = 2
+        contentView.layer.borderColor = UIColor.black.cgColor
+        contentView.layer.cornerRadius = 5
+        contentView.layer.shadowColor = UIColor.label.cgColor
+        contentView.layer.shadowOffset = CGSize(width: -4, height: 4)
+        contentView.layer.shadowOpacity = 0.3
+    }
     
     override func prepareForReuse() {
         super.prepareForReuse()
