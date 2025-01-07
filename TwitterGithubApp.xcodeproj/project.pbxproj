@@ -31,6 +31,7 @@
 		A64B6FC62D2965FC00CCF8C6 /* ContributorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B6FC52D2965E700CCF8C6 /* ContributorDetailViewController.swift */; };
 		A64B6FC82D2967C400CCF8C6 /* ContributorDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B6FC72D2967C200CCF8C6 /* ContributorDetailViewViewModel.swift */; };
 		A6538FF02D2B359F009A7E7A /* ContributorWithDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6538FEF2D2B3598009A7E7A /* ContributorWithDetails.swift */; };
+		A67458B82D2D547A00935FD5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67458B72D2D547600935FD5 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		A64B6FC52D2965E700CCF8C6 /* ContributorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorDetailViewController.swift; sourceTree = "<group>"; };
 		A64B6FC72D2967C200CCF8C6 /* ContributorDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorDetailViewViewModel.swift; sourceTree = "<group>"; };
 		A6538FEF2D2B3598009A7E7A /* ContributorWithDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorWithDetails.swift; sourceTree = "<group>"; };
+		A67458B72D2D547600935FD5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		A642D4E92D25BA8600AAABD6 /* TwitterGithubApp */ = {
 			isa = PBXGroup;
 			children = (
+				A67458B62D2D546D00935FD5 /* Common */,
 				A63FBA9C2D28047A008063D9 /* Managers */,
 				A642D5052D25C0F500AAABD6 /* Views */,
 				A642D5022D25C04100AAABD6 /* ViewModels */,
@@ -207,6 +210,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A67458B62D2D546D00935FD5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A67458B72D2D547600935FD5 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,6 +297,7 @@
 				A642D4EA2D25BA8600AAABD6 /* AppDelegate.swift in Sources */,
 				A63FBA902D27FABE008063D9 /* Contributor.swift in Sources */,
 				A63FBA9B2D280232008063D9 /* ContributorListViewViewModel.swift in Sources */,
+				A67458B82D2D547A00935FD5 /* Constants.swift in Sources */,
 				A63FBA972D27FC8C008063D9 /* ContributorListView.swift in Sources */,
 				A642D5072D25C10D00AAABD6 /* OrganizationView.swift in Sources */,
 				A642D4FE2D25BF6A00AAABD6 /* TabViewController.swift in Sources */,

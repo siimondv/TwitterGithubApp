@@ -57,6 +57,6 @@ final class Request {
 }
 
 extension Request {
-    static let organizationRequest = Request(url: URL(string: "https://api.github.com/repos/twitter/opensource-website")!)
-    static let contributorListRequest = Request(url: URL(string: "https://api.github.com/repos/twitter/opensource-website/contributors")!)
+    static let organizationRequest = Request(url: URL(string: Constants.organizationURL)!)
+    static let contributorListRequest = Request(url: URL(string: Constants.contributorsURL)!)
 }

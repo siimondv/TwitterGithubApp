@@ -22,7 +22,7 @@ final class ContributorDetailViewViewModel {
     
     func getContributorWithDetails() {
         
-        guard let url = URL(string: ("https://api.github.com/users/") + contributor.login ) else {
+        guard let url = URL(string: Constants.usersURL + contributor.login ) else {
             return
         }
         guard let request = Request(url: url) else {
